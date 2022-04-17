@@ -12,43 +12,43 @@ router.post('/',(req,res,next) => {
     //Question Card interface
     questionCardObj = strikeObj.Question('cardResp');
     questionCardObj.QuestionCard().SetHeaderToQuestion(1,strikeObj.HALF_WIDTH).
-        AddTextRowToQuestion(strikeObj.H3,"Click on the below bot","blue",true);
+        AddTextRowToQuestion(strikeObj.H3,"Click on the below bot","red",true);
 
-    // Answer Card Interface    
+    // Answer Card Interface
     answerCardObj = questionCardObj.Answer(true);
     answerCardObj.AnswerCardArray(strikeObj.VERTICAL_ORIENTATION);
     answerCardObj.AnswerCard().SetHeaderToAnswer(2,strikeObj.HALF_WIDTH).
-        AddGraphicRowToAnswer(strikeObj.PICTURE_ROW,["https://img.freepik.com/free-vector/chat-bot-concept-illustration_114360-5522.jpg"],[]).
+        AddGraphicRowToAnswer(strikeObj.FULL_WIDTH,["https://img.freepik.com/free-vector/chat-bot-concept-illustration_114360-5522.jpg"],[]).
         AddTextRowToAnswer(strikeObj.H3,"This is a Bot Demonstration","#008fcc",false);
 
-    // Question Text interface   
+    // Question Text interface
     questionTextObj = strikeObj.Question('name');
     questionTextObj.QuestionText().
         SetTextToQuestion("What is your name?");
 
-    // answer Text-Input interface    
+    // answer Text-Input interface
     questionTextObj.TextInput();
 
-    // Question Text interface   
+    // Question Text interface
     questionLocationObj = strikeObj.Question('location');
     questionLocationObj.QuestionText().
         SetTextToQuestion("Some question text for Location-Input interface");
 
     // Answer Location interface
     questionLocationObj.LocationInput('Select location');
-    
-    // Question Text interface   
+
+    // Question Text interface
     questionNumberObj = strikeObj.Question('favNumber');
     questionNumberObj.QuestionText().
         SetTextToQuestion("Whats your favourite number?");
-    
+
     // Answer number interface
     questionNumberObj.NumberInput('Select Number');
-    
-    // Question Text interface   
+
+    // Question Text interface
     questionDateObj = strikeObj.Question('dob');
     questionDateObj.QuestionText().
-        SetTextToQuestion("What is your date of bith");        
+        SetTextToQuestion("What is your date of birth");
 
     // Answer Date interface
     questionDateObj.DateInput('Select Date');

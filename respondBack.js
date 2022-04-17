@@ -8,12 +8,12 @@ router.post('/',(req,res,next) => {
     const strikeObj = new Create('getting_started','');
 
     let apiRes = req.body
-    let cardResp = apiRes["user_session_variables"]["cardResp"][0]
+    let cardResp = apiRes["user_session_variables"]["cardResp"]
     let name = apiRes["user_session_variables"]["name"]
     let locationLat = apiRes["user_session_variables"]["location"]["latitude"]
     let locationLon = apiRes["user_session_variables"]["location"]["longitude"]
     let favNumber = apiRes["user_session_variables"]["favNumber"]
-    let dob = apiRes["user_session_variables"]["dob"][0]
+    let dob = apiRes["user_session_variables"]["dob"]
 
     //Question Card interface
     quesObj = strikeObj.Question('val1');
